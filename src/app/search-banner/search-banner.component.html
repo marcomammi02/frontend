@@ -1,0 +1,42 @@
+<div id="banner" [ngClass]="{'d-none': !isBannerOpen}">
+ <h1 class="text-center py-3">Search by:</h1>
+  <form id="tire-form" class="d-flex flex-column justify-content-evenly align-items-center">
+
+    <label for="brand-select"><span>Brand</span>
+      <select id="brand-select" name="brand-select" [(ngModel)]="selectedBrand">
+        <option value="">All brands</option>
+        <option *ngFor="let brand of availableBrands" [value]="brand">{{ brand }}</option>
+        <option value="Roadstone">Roadstone</option>
+      </select>
+    </label>
+
+    <label for="size-select"><span>Size</span>
+      <select id="size-select" name="size-select" [(ngModel)]="selectedSize">
+        <option value="">All sizes</option>
+        <option *ngFor="let size of availableSizes" [value]="size">{{ size }}</option>
+      </select>
+    </label>
+
+    <div class="w-100 d-flex justify-content-evenly">
+      <label for="summer-checkbox">
+        <img class="w-100 mb-2" src="assets/images/summer.png">
+        <input type="checkbox" checked id="summer-checkbox" name="summer-checkbox" value="summer" [(ngModel)]="summerChecked">
+      </label>
+
+      <label for="all-season-checkbox">
+        <img class="w-100 mb-2" src="assets/images/all-season.png">
+        <input type="checkbox" checked id="all-season-checkbox" name="all-season-checkbox" value="all-season" [(ngModel)]="allSeasonChecked">
+      </label>
+
+      <label for="winter-checkbox">
+        <img class="w-100 mb-2" src="assets/images/winter.png">
+        <input type="checkbox" checked id="winter-checkbox" name="winter-checkbox" value="winter" [(ngModel)]="winterChecked">
+      </label>
+    </div>
+
+    <button type="submit" form="tire-form" value="Submit" (click)="search(); closeBanner()">Search</button>
+
+  </form>
+
+  <a (click)="closeBanner()"><img src="assets/images/cross.png"></a>
+</div>

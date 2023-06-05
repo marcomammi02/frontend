@@ -1,0 +1,27 @@
+<div class="component-container">
+  <h1>Results:</h1>
+  <a [routerLink]="['/']">Back to Homepage</a>
+  <table class="table table-striped" *ngIf="resultsObj">
+    <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Brand</th>
+      <th scope="col">Size</th>
+      <th scope="col">DOT</th>
+      <th scope="col">Season</th>
+      <th scope="col">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let obj of resultsObj; let i = index">
+      <th scope="row">{{ i }}</th>
+      <td>{{ obj.brand }}</td>
+      <td>{{ obj.size }}</td>
+      <td>{{ obj.dot }}</td>
+      <td>{{ obj.season }}</td>
+      <td>{{ obj.price }} &euro;</td>
+    </tr>
+    </tbody>
+  </table>
+  <h2 *ngIf="!resultsObj">Sorry, no results for your search :(</h2>
+</div>
