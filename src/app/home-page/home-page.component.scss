@@ -7,25 +7,12 @@
 }
 
 .component-container {
-  width: 100vw;
-  height: 100vh;
   background-image: url(../../assets/images/background.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .main-container {
-  text-align: center;
-  width: 300px;
-  margin: 0 auto;
-
-  @media screen and (min-width: 992px) {
-    width: 500px;
-    position: absolute;
-    right: 30%;
-    transform: translateX(50%);
-  }
-
   h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
@@ -51,9 +38,5 @@
       border-radius: 30px;
       cursor: pointer;
     }
-  }
-
-  .results {
-    color: #fff;
   }
 }

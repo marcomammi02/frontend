@@ -1,6 +1,8 @@
 <div class="component-container">
-  <h1>Results:</h1>
-  <a [routerLink]="['/']">Back to Homepage</a>
+  <div class="d-flex justify-content-between align-items-center">
+    <h1>Results:</h1>
+    <a [routerLink]="['/']">Back to Homepage</a>
+  </div>
   <table class="table table-striped" *ngIf="resultsObj">
     <thead>
     <tr>

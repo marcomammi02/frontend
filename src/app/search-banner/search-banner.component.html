@@ -1,5 +1,9 @@
 <div id="banner" [ngClass]="{'d-none': !isBannerOpen}">
- <h1 class="text-center py-3">Search by:</h1>
+  <div class="row">
+    <div class="col-1"></div>
+    <h1 class="text-center py-3 col-10">Search by:</h1>
+    <a class="col-1" (click)="closeBanner()"><img class="w-75 mt-2" src="assets/images/cross.png"></a>
+  </div>
   <form id="tire-form" class="d-flex flex-column justify-content-evenly align-items-center">
 
     <label for="brand-select"><span>Brand</span>
@@ -37,6 +41,4 @@
     <button type="submit" form="tire-form" value="Submit" (click)="search(); closeBanner()">Search</button>
 
   </form>
-
-  <a (click)="closeBanner()"><img src="assets/images/cross.png"></a>
 </div>

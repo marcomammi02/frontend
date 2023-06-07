@@ -20,13 +20,16 @@
     width: 300px;
   }
 
+  > div {
+    background-color: #3d3d3d;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+
   h1 {
     font-family: 'Orbitron', sans-serif;
     color: #E74646;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background-color: #3d3d3d;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
   }
 
   form {
@@ -76,10 +79,6 @@
   }
 
   a {
-    position: absolute;
-    top: .5rem;
-    right: .5rem;
-
     &:hover {
       cursor: pointer;
     }
