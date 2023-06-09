@@ -3,7 +3,7 @@
     <h1>Results:</h1>
     <a [routerLink]="['/']">Back to Homepage</a>
   </div>
-  <table class="table table-striped" *ngIf="resultsObj">
+  <table class="table table-striped" *ngIf="resultsObj?.length > 0">
     <thead>
     <tr>
       <th scope="col">ID</th>
@@ -25,5 +25,5 @@
     </tr>
     </tbody>
   </table>
-  <h2 *ngIf="!resultsObj">Sorry, no results for your search :(</h2>
+  <h2 *ngIf="!resultsObj || resultsObj?.length == 0">Sorry, no results for your search :(</h2>
 </div>
